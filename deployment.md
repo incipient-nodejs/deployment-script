@@ -1,10 +1,10 @@
-# NodeJS 
+Deployment Steps
 
 # URL : https://flying-paws.node.demo4work.com/
 # Port : 3006
 
 # Add known host to flying paws
-1) Go to Bitbucket >> flying paws repo
+1) Go to Bitbucket >> i.e. flying paws repo
 2) Go to Repo settings >> SSH  >> Enable Pipelines (check it)
 3) Go to Repo settings >> SSH >> Add known host
    - Add host "159.89.165.78" & fetch
@@ -16,7 +16,7 @@
 3) Go to Git Repository
 4) Select Bitbucket
 5) Enter "Web Application Name" >> "flying-paws-3006"
-6) Add subdomain >> flying-paws.node.demo4work.com
+6) Add subdomain >> i.e. flying-paws.node.demo4work.com
 7) Enable AutoSSL
 8) Now, go to git section
    1) ENter Repository >> "incipientinfo-node/flying-paws-backend"
