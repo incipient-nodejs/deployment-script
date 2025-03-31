@@ -57,7 +57,7 @@ proxy_pass http://127.0.0.1:3006;
   node -v
   npm install --force
   (pm2 delete -s flying-paws-3006 || exit 0) && npm run prod
-```
+
 - Check "Enable" & click "deploy"
   
 ## Add ENV
