@@ -1,31 +1,28 @@
 Deployment Steps
 
-# URL : https://flying-paws.node.demo4work.com/
-# Port : 3006
-
-# Add known host to flying paws
+## Add known host to the project
 1) Go to Bitbucket >> i.e. flying paws repo
 2) Go to Repo settings >> SSH  >> Enable Pipelines (check it)
 3) Go to Repo settings >> SSH >> Add known host
    - Add host "159.89.165.78" & fetch
    - Click "Add"
   
-# Create webapp
+## Create webapp
 1) Go to web applications
 2) Click "Deploy New Web App"
 3) Go to Git Repository
 4) Select Bitbucket
-5) Enter "Web Application Name" >> "flying-paws-3006"
+5) Enter "Web Application Name" >> i.e. "flying-paws-3006"
 6) Add subdomain >> i.e. flying-paws.node.demo4work.com
 7) Enable AutoSSL
 8) Now, go to git section
-   1) ENter Repository >> "incipientinfo-node/flying-paws-backend"
-   2) Enter branch >> "master"
+   1) ENter Repository >> i.e. "incipientinfo-node/flying-paws-backend"
+   2) Enter branch >> i.e. "develop"
    3) Add access key to bitbucket. (Go to bitbucket repo >> Repo settings >> Access keys)
 9) Select "web application stack" >> "Native NGINX + Custom config"
 10) Click "Deploy" button at last
 
-# Add Nginx Config
+## Add Nginx Config
 
 - Now go to web settings >> NGINX Config
 - click "Add new nginx config"
@@ -41,12 +38,12 @@ proxy_pass http://127.0.0.1:3006;
 ```
 - Save config
   
-# Add webhook
+## Add webhook
 - Go to webapp >> git >> copy webhook URL
 - Now, go to bitbucket repo >> repo settings >> webhook >>  Add runcloud webhook 
   https://manage.runcloud.io/webhooks/git/lBZLWV0lzwHCviNXuvBqXeda1703573823/zFsJeGBdQu2u8rMHMmkVvQXRl884Pspp
 
-# Add script to run project (NOTE: this will differ based on technology specific commands)
+## Add script to run project (NOTE: this will differ based on technology specific commands)
 - Go to git >> Deployment script
 - And paste below code.
   ```
@@ -64,7 +61,7 @@ proxy_pass http://127.0.0.1:3006;
 
 - Check "Enable" & click "deploy"
   
-# Add ENV
+## Add ENV
 - Connect to terminal using ssh `$ ssh runcloud@159.89.165.78`
 - Go to directory `$ cd /webapps/flying-paws-3006`
 - Run `$ nano .env`
@@ -76,13 +73,11 @@ PORT=3006
 
 # database uri string   
 DB_URI =XXXX
-
-
 ```
 - You need to redoploy. Go to runcloud >> git >> deployment script >> click deploy button at top.
 - `https://flying-paws.node.demo4work.com/` it should now work.
 
-## HOW to add SSH key
+# HOW to add SSH key
 for ubuntu
 1) run below steps
 ```
