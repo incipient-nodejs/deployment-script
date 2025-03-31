@@ -1,4 +1,4 @@
-Deployment Steps
+# Deployment Steps
 
 ## Add known host to the project
 1) Go to Bitbucket >> i.e. flying paws repo
